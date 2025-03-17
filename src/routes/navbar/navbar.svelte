@@ -1,6 +1,7 @@
 <script>
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
     import logo from '$lib/assets/nodesize.svg';
+    import { base } from '$app/paths';
 </script>
 
 <Navbar class="w-full m-2">
@@ -10,7 +11,7 @@
 </NavBrand>
 <NavHamburger />
 <NavUl>
-    <NavLi href="/">Gallery</NavLi>
-    <NavLi href="/about">About</NavLi>
+    <NavLi href="{base}/">Gallery</NavLi>
+    <NavLi href="{base}/about">About</NavLi>
 </NavUl>
 </Navbar>
