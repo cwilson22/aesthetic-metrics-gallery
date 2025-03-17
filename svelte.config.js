@@ -18,6 +18,9 @@ const config = {
 		paths: {
 			base: process.argv.includes('dev') ? '' : '/aesthetic-metrics-gallery'
 			// base: '/aesthetic-metrics-gallery'
+		},
+		prerender: {
+			entries: []
 		}
 	}
 };
