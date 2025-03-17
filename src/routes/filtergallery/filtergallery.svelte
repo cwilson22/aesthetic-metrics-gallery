@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import { Gallery, Toggle, Img, Button } from 'flowbite-svelte';
+    import { base } from "$app/paths";
 
     type Img = {
         src: string;
@@ -11,16 +12,16 @@
     };
     let images: Img[] = [];
     onMount(async () => {
-        const response = await fetch('/data.json');
+        const response = await fetch(`${base}/data.json`);
         images = await response.json();
         // images = images.filter(img => ['src/lib/images/exp0/graph155.png', 'src/lib/images/exp0/graph224.png', 'src/lib/images/exp0/graph229.png','src/lib/images/exp0/graph233.png', 'src/lib/images/exp0/graph292.png','src/lib/images/exp0/graph324.png','src/lib/images/exp0/graph331.png','src/lib/images/exp0/graph339.png','src/lib/images/exp0/graph371.png','src/lib/images/exp0/graph441.png','src/lib/images/exp0/graph515.png','src/lib/images/exp0/graph716.png','src/lib/images/exp0/graph722.png','src/lib/images/exp0/graph746.png','src/lib/images/exp0/graph748.png','src/lib/images/exp0/graph759.png','src/lib/images/exp0/graph779.png','src/lib/images/exp0/graph838.png','src/lib/images/exp0/graph910.png','src/lib/images/exp0/graph938.png','src/lib/images/exp0/graph1006.png','src/lib/images/exp0/graph1017.png','src/lib/images/exp0/graph1022.png','src/lib/images/exp0/graph1083.png','src/lib/images/exp0/graph1121.png','src/lib/images/exp0/graph1134.png','src/lib/images/exp0/graph1642.png'].includes(img.src));
     });
 
     const images4 = [
-      {alt: 'xyz', src: 'src/lib/images/exp0/graph155.png'},
-      {alt: 'xyz', src: 'src/lib/images/exp0/graph224.png'},
-      {alt: 'xyz', src: 'src/lib/images/exp0/graph229.png'},
-      {alt: 'xyz', src: 'src/lib/images/exp0/graph233.png'},
+      {alt: 'xyz', src: `${base}/lib/images/exp0/graph155.png`},
+      {alt: 'xyz', src: '../lib/images/exp0/graph224.png'},
+      {alt: 'xyz', src: './lib/images/exp0/graph229.png'},
+      {alt: 'xyz', src: 'lib/images/exp0/graph233.png'},
       {alt: 'xyz', src: 'src/lib/images/exp0/graph292.png'},
       {alt: 'xyz', src: 'src/lib/images/exp0/graph324.png'},
       {alt: 'xyz', src: 'src/lib/images/exp0/graph331.png'},
@@ -147,7 +148,7 @@
     <div class="grid grid-cols-3 gap-4">
       {#each filteredImages as item}
           <div class="relative ring-2 ring-gray-300 p-2 pb-5 rounded-lg">
-              <img src={item.src} alt={item.alt} class="h-auto max-w-full rounded-lg max-h-60" />
+              <img src={`${base}/${item.src}`} alt={item.alt} class="h-auto max-w-full rounded-lg max-h-60" />
               <div class="absolute bottom-0 left-0 text-gray text-sm p-2 w-full">
                   {#if item.alt}
                       {item.alt}

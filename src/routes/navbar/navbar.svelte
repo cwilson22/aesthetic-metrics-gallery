@@ -1,6 +1,6 @@
 <script>
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger } from 'flowbite-svelte';
-    import logo from '$lib/assets/nodesize.svg';
+    import logo from '../../lib/assets/nodesize.svg';
     import { base } from '$app/paths';
 </script>
 
