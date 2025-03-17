@@ -117,7 +117,7 @@
 
 
 <div class="max-w-5xl mx-auto m-2">
-    <!-- <div>{JSON.stringify(images)}</div> -->
+    <div>{JSON.stringify(images)}</div>
 
     <div class="flex gap-4 items-center mt-3 mb-2">
         <p class="w-64 flex-1 text-sm font-medium text-gray-700">Individual Aesthetic Metrics:</p>
