@@ -1,0 +1,1 @@
+import{t as r,a as m}from"../chunks/DdtPjhB7.js";import"../chunks/DS0Qlrte.js";import{f as p,n as e}from"../chunks/0bsSbx6x.js";import{N as s}from"../chunks/DjNtUkAt.js";var i=r(`<!> <div class="max-w-5xl mx-auto"><p>It's me! I'm a page!</p></div>`,1);function x(t){var a=i(),o=p(a);s(o),e(2),m(t,a)}export{x as component};
